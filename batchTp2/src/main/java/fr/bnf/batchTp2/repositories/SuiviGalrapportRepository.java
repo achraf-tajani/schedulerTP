@@ -19,7 +19,8 @@ public interface SuiviGalrapportRepository extends CrudRepository<SuiviGalrappor
     @Query(value = "select * from suivigalrapport WHERE etat='AFAIRE' ORDER BY date_creation ASC LIMIT ?1", nativeQuery = true)
     public List<SuiviGalrapport> getNextTodoDemande(Long limit);
 	
-	
+    @Query(value = "select * from suivigalrapport WHERE etat='ENCOURS'", nativeQuery = true)
+    public List<SuiviGalrapport> getDemandeEncours();
 
     @Transactional
     @Modifying

@@ -1,7 +1,6 @@
 package fr.bnf.batchTp2.entities;
 
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -9,19 +8,14 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
-
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.OptimisticLockType;
-import org.hibernate.annotations.OptimisticLocking;
 import org.hibernate.annotations.UpdateTimestamp;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
-
 import fr.bnf.batchTp2.common.Etat_demande;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -60,9 +54,8 @@ public class SuiviGalrapport {
 	private int sleep;
 	@Transient
 	private boolean maxSnippetAuthorised;
-	
 	@Version
 	private Integer version;
-
 	
+
 }
